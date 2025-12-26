@@ -1,0 +1,2 @@
+- programming language 
+- embedded system diploma 
