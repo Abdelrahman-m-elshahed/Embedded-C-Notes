@@ -43,10 +43,30 @@ so assignment operator (=) has higher precedence than the comma operator(,), so 
 
 int main(void)
 {
-    int x = (printf("hello\n"),8); // prinf will return the number of char
+    int x = (printf("hello\n"),8); // prinf() will return the number of char
 
     printf("%d\n",x); // 8
     x = printf("hello\n"); 
-    printf("%d",x); // 6 
+    printf("number of charcters pritned is %d",x); // 6 
 }
 ```
+
+
+a trick with `printf()` : print "hello world" without using (;) in your code
+one way to do is to add the `printf()` statement inside and if condition with an empty body 
+
+```C
+#include <stdio.h>
+
+int main(void)
+{
+	if(printf("hello world")) {}
+	// the prinf will return the number of characters which doesn't equal to zero
+}
+```
+
+## Task
+indiabix MCQs
+write a code that figures out if the variable is in little or big endianness
+Swap  in (3 different ways)
+
