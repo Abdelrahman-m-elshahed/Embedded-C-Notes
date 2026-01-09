@@ -65,8 +65,11 @@ int main(void)
 }
 ```
 
-## Task
-indiabix MCQs
-write a code that figures out if the variable is in little or big endianness
-Swap  in (3 different ways)
+***Task***
+1. indiabix MCQs
+2. write a code that figures out if the variable is in little or big endianness
+3. Swap  in (3 different ways)
 
+***Solution***
+1. [[swap.c|Swap Problem]]	
+2. [[endianness.c|Endianness Problem]]
