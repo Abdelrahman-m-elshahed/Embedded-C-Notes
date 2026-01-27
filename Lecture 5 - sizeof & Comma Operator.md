@@ -73,3 +73,164 @@ int main(void)
 ***Solution***
 1. [[swap.c|Swap Problem]]	
 2. [[endianness.c|Endianness Problem]]
+
+---
+## Controlling Program Flow 
+the program will execute in 3 different ways
+1. sequential "without using loops or conditions"
+2. Decision "use conditions"
+3. Loop
+
+Which means any statement will be:
+1. Selection or Condition
+	1. if condition
+	2. Switch Case 
+	3. Ternary operator 
+2. iteration 
+	1. While Loop
+	2. For Loop
+	3. Do While loop
+3. Jump 
+	1. Break
+	2. Continue 
+	3. goto 
+4. other C statements 
+
+### 1. Selection Statement 
+
+***If Statement :***
+```C
+// Syntax
+if(condition)
+{
+	// body
+}
+
+// Example
+int x = 10;
+if(x == 10)
+{
+	X++;
+}
+printf("X = %d\n",x); // X = 11
+
+if(x = 10) // bug , the condition will always be True
+{
+	X++;
+}
+
+if(x = 0) // bug , the condition will always be False "unreacahble code"
+{
+	X++;
+}
+```
+
+***Cascaded if :***
+```C
+//Syntax
+if(conditon)
+{
+	// body
+}
+elseif(conditon)
+{
+	// body
+}
+else
+{
+	// body
+}
+
+//Example
+if(grade > 50) 
+	printf("passed");
+else if(grade > 40)
+	printf("passed with mercy");
+else
+	printf("failed");
+```
+
+***if....else :***
+```C
+//Syntax
+if(condition)
+{
+	// body
+}
+else
+{
+	// body
+}
+```
+
+***Nested if....else :***
+```c
+//Syntax
+if(condition)
+{
+	// body
+}
+else
+{
+	if(condition)
+	{
+		// body
+	}
+	else
+	{
+		// body
+	}
+}
+```
+
+***Rules***
+1. elseif, else are *Optional*
+2. else should be appended to the if condition 
+3. it is recommended not to use more than 3 stages when using nested if
+4. { } is used for the readability 
+	1. when using one statement in the body 
+	2. but it is mandatory when having more than one statement 
+5. use ( ) when u use more than on condition *cuz of Precedence*
+
+***Dangling else problem :*** 
+```c
+if()
+	if()
+		printf();
+else
+	printf();
+```
+so the program doesn't know the else is connected to which if 
+it is solution is using curly bracket 
+
+***Tricky Codes***
+```c
+int x =5;
+if(x == 4); // there is no statement to be executed 
+x = x+2;
+// x = 7
+
+if(x = /*anynumber*/) 
+// if the number != 0 then "true" else "false"
+
+// compilation error
+if(x==10)
+{
+	printf("lol\n");
+}
+x = 30;
+else 
+{
+	printf("lmao\n");
+}
+
+
+int x = 10, y =0,z =30;
+if(x && y && z++)
+	printf("ok\n");
+printf("Z = %d",z);
+/*
+Z = 30
+*/
+// but if Y != 0 Z would be 31
+```
