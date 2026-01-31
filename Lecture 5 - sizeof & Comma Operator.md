@@ -96,9 +96,9 @@ Which means any statement will be:
 	3. goto 
 4. other C statements 
 
-### 1. Selection Statement 
+## 1. Selection Statement 
 
-***If Statement :***
+### If Statement 
 ```C
 // Syntax
 if(condition)
